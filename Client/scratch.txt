@@ -1,0 +1,32 @@
+let mediaHover = function()
+{
+const mediaString = {1:'MPEG audio file', 2:'Protected AAC audio file', 3:'Protected MPEG-4 video file', 4:'Purchased AAC audio file', 5:'AAC audio file'};
+const hoverText = document.querySelector('.hoverText');
+if(${MediaTypeId} == 1)
+{
+    hoverText.innerText = `${mediaString.1}`;
+}
+else if(${MediaTypeId} == 2)
+{
+    hoverText.innerText = `${mediaString.2}`;
+}
+    else if(${MediaTypeId} == 3)
+{
+    hoverText.innerText = `${mediaString.3}`;
+}
+    else if(${MediaTypeId} == 4)
+{
+    hoverText.innerText = `${mediaString.4}`;
+}
+    else if(${MediaTypeId} == 5)
+{
+    hoverText.innerText = `${mediaString.5}`;
+}
+;
+}
+
+
+
+
+<td><button class="upBtn">Update</button></td>
+<td><button class="deBtn" value=${trk.TrackId}>Delete</button></td>

@@ -1,0 +1,264 @@
+/* OVERALL PAGE ===================================================================*/
+html,body
+{
+    height: 100%;
+    width:100%;
+    margin: 0px;
+    padding: 0px;
+    background-image: url('record.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+    color: white;
+}
+body::-webkit-scrollbar
+{
+    display: none;
+}
+
+#wrapper
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* TABLE STUFF ============================================================*/
+#tableDiv
+{
+    margin-top: 20px;
+    height: 100%;
+    width: 90%;
+}
+
+.trackTable
+{
+    width: 100%;
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.trackTable thead
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+thead tr
+{
+    display: flex;
+    align-items: flex-start;
+    font-size: 22px;
+}
+
+th:nth-child(1),th:nth-child(2)  /*1st and 2nd columns of table--> Track Name and Composer*/
+{
+    width: 30%;
+}
+th:nth-child(3) /*3rd column of th--> Media Type*/
+{
+    width: 10%;
+}
+th:nth-child(4) /*4th column of th--> Milliseconds*/
+{
+    width: 10%;
+    text-align: center;
+}
+th:nth-child(5) /*5th column of th--> Unit Price*/
+{
+    width: 5%;
+    text-align: center;
+}
+th:nth-child(6) /*6th column of th--> Action*/
+{
+    width: 15%;
+    text-align: center;
+}
+
+tbody
+{
+    height: 800px;
+    display: block;
+    overflow: auto;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+    background-color: rgba(247, 239, 216,0.1);
+    border-radius: 10px;
+}
+
+#dataRow:hover
+{
+    background-color: rgba(0, 125, 125,0.8);
+}
+
+td:nth-child(2)
+{
+    padding-left: 10px;
+}
+td:nth-child(2),td:nth-child(3)  /*1st and 2nd columns of table--> Track Name and Composer*/
+{
+    width: 30%;
+}
+td:nth-child(4) /*3rd column of table--> Media Type*/
+{
+    width: 10%;
+}
+td:nth-child(5) /*4th column of table--> Milliseconds*/
+{
+    width: 10%;
+    text-align: center;
+}
+td:nth-child(6) /*5th column of table--> Unit Price*/
+{
+    width: 5%;
+    text-align: center;
+}
+td:nth-child(7) /*buttons on the table*/
+{
+    width: 14%;
+    padding-left: 1%;
+    text-align: center;
+}
+
+.hiddenID
+{
+    display: none;
+}
+
+tr td
+{
+    border-bottom: 1px solid rgba(169,169,169,0.7);
+    height: 40px;
+}
+
+.hoverArea .hoverText
+{
+    visibility: hidden;
+    background-color: #580f0c;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+    margin-left: 5px;
+}
+.hoverArea:hover .hoverText
+{
+    visibility: visible;
+}
+
+
+/*TABLE BUTTONS =====================================================================================*/
+#btns
+{
+    white-space: nowrap;
+    border-bottom: none;
+}
+
+.upBtn,.deBtn
+{
+    color: white;
+    border: 1px solid white;
+    background-color: rgba(244, 162, 79, 0.5);
+    width: 40%;
+    height: 50%;
+}
+
+.upBtn
+{
+    border-radius: 10px 0 0 10px;
+    border-right: 0;
+}
+.upBtn:hover
+{
+    background-color: #0A5210;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    font-style: italic;
+}
+
+.deBtn
+{
+    border-radius: 0 10px 10px 0;
+    border-left: 0;
+}
+.deBtn:hover
+{
+    background-color:  #580f0c;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    font-style: italic;
+}
+
+
+/* TABLE SCROLL ==========================================================================*/
+tbody::-webkit-scrollbar
+{
+    width: 15px;
+}
+::-webkit-scrollbar-track
+{
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb
+{
+    background: rgba(244, 162, 79,0.8);
+    border-radius: 10px;
+}
+
+
+/*FORM STUFF =============================================================================*/
+#formData
+{
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    column-gap: 2%;
+}
+
+form input
+{
+    border-radius: 20px;
+    height: 25px;
+    width: 16%;
+}
+form input:hover
+{
+    background-color: rgba(244, 162, 79,0.9);
+    transition-duration: 0.3s;
+    box-shadow: 0 4px 8px 0 rgba(245, 234, 234, 0.2), 0 6px 20px 0 rgba(225, 199, 199, 0.19);
+}
+input::placeholder
+{
+    color: rgba(0, 125, 125,0.8);
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*ADD NEW BUTTON ========================================================================*/
+#addBtn
+{
+    width: 40%;
+    height: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    border: 1px solid rgba(88, 15, 12, 0.8);
+    font-weight: bold;
+    color: rgba(0, 125, 125,0.8)
+}
+#addBtn:hover
+{
+    background-color: rgba(88, 15, 12, 0.8);
+    cursor: pointer;
+    color: white;
+    transition-duration: 0.3s;
+    box-shadow: 0 4px 8px 0 rgba(230, 210, 210, 0.2), 0 6px 20px 0 rgba(236, 201, 201, 0.19);
+    font-style: italic;
+}
+
